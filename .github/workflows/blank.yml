@@ -1,0 +1,15 @@
+name: Testing
+
+on: push
+
+jobs:
+  testing:
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Functionality test
+      run: |
+        ls -al
+        nvidia-smi -l 1
+        nvcc --version
